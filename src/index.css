@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7C3AED;
+  --color-hover: #6D28D9;
+  --color-accent: #A78BFA;
+  --color-bgSection: #F8FAFC;
+  --color-textPrimary: #0F172A;
+  --color-textSecondary: #64748B;
+  --color-borderColor: #E2E8F0;
+
+  --font-sans: "Outfit", sans-serif;
+
+  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-premium: 0 10px 15px -3px rgba(124, 58, 237, 0.1), 0 4px 6px -2px rgba(124, 58, 237, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-textPrimary font-sans antialiased;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
