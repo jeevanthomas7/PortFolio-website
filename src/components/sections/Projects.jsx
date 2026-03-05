@@ -1,32 +1,40 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+import AiMusic from "../../img/AiMusic.png";
+import Expense from "../../img/Expense.png";
+import SmartCar from "../../img/smartCAR.jpeg";
+
 const projects = [
-    {
-        title: "AI Based Music Recommendation System",
-        description: "AI-based emotion detection with personalized music suggestions. Features dynamic playlist generation and real-time analysis.",
-        tags: ["MERN", "AI", "Python"],
-        github: "#",
-        demo: "#",
-        image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "Expense Tracker",
-        description: "State-managed expense tracking with dashboard visualization. Includes detailed analytics and transaction history.",
-        tags: ["React", "Redux", "Chart.js"],
-        github: "#",
-        demo: "#",
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "Smart Car Control System",
-        description: "Real-time wireless car control with sensor monitoring. Built for IoT performance and low-latency response.",
-        tags: ["Android", "IoT", "C++"],
-        github: "#",
-        demo: "#",
-        image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop"
-    },
+  {
+    title: "AI Based Music Recommendation System",
+    description:
+      "AI-based emotion detection with personalized music suggestions. Features dynamic playlist generation and real-time analysis.",
+    tags: ["MERN", "AI", "API"],
+    github: "https://github.com/jeevanthomas7/Ai-Based-Music-Recommendation-System",
+    demo: "https://dot-in.vercel.app/",
+    image: AiMusic,
+  },
+  {
+    title: "Expense Tracker",
+    description:
+      "State-managed expense tracking with dashboard visualization. Includes detailed analytics and transaction history.",
+    tags: ["React", "Redux", "Chart.js"],
+    github: "#",
+    demo: "https://expense-tracker-website-eosin.vercel.app/",
+    image: Expense,
+  },
+  {
+    title: "Smart Car Control System",
+    description:
+      "Real-time wireless car control with sensor monitoring. Built for IoT performance and low-latency response.",
+    tags: ["Android", "IoT", "C++"],
+    github: "#",
+    demo: "#",
+    image: SmartCar,
+  },
 ];
+
 
 const Projects = () => {
     return (

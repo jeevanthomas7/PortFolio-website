@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Button from "../ui/Button";
+import cv from "../../img/Jeevan_Thomas.pdf";
 
 const Hero = () => {
     return (
@@ -55,11 +56,11 @@ const Hero = () => {
                             View Projects
                         </Button>
                     </a>
-                    <a href="#" className="w-full sm:w-auto">
-                        <Button variant="outline" className="w-full sm:min-w-[160px] py-3 rounded-lg text-sm font-bold border-2">
-                            Download CV
-                        </Button>
-                    </a>
+                  <a href={cv} download className="w-full sm:w-auto">
+    <Button variant="outline" className="w-full sm:min-w-[160px] py-3 rounded-lg text-sm font-bold border-2">
+        Download CV
+    </Button>
+</a>
                 </motion.div>
 
                 <motion.div
@@ -69,7 +70,7 @@ const Hero = () => {
                     className="flex justify-center items-center gap-6 text-2xl text-slate-700"
                 >
                     {[
-                        { icon: FaGithub, href: "#" },
+                        { icon: FaGithub, href: "https://github.com/jeevanthomas7" },
                         { icon: FaEnvelope, href: "mailto:jeevanthomas717@gmail.com" },
                         { icon: FaLinkedin, href: "https://www.linkedin.com/in/jeevan-thomas-", color: "hover:text-primary" }
                     ].map((social, i) => (
