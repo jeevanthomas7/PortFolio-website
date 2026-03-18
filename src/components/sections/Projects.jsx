@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import AiMusic from "../../img/AiMusic.png";
-import Chatbot from "../../img/Chatbot.png";
+import Chatbot from "../../img/chatbot.png"
 import SmartCar from "../../img/smartCAR.jpeg";
 
 const projects = [
