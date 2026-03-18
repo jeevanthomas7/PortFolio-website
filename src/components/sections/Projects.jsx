@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import AiMusic from "../../img/AiMusic.png";
-import Chatbot from "../../img/chatbot.png"
+import Chatbot from "../../img/Chatbot.png"
 import SmartCar from "../../img/smartCAR.jpeg";
 
 const projects = [
@@ -18,8 +18,8 @@ const projects = [
 {
   title: "AI Chatbot",
   description:
-    "Full-stack AI chatbot built with Next.js and TypeScript using OpenRouter API. Features real-time messaging, conversation history, and intelligent responses with a clean UI.",
-  tags: ["Next.js", "TypeScript", "API", "Tailwind CSS"],
+    "Built a full-stack AI chatbot using Next.js and TypeScript with OpenRouter API integration. Features real-time messaging, context-aware responses, and responsive UI with Tailwind CSS. Implemented secure Google Authentication (OAuth) for user login, enabling personalized chat sessions and improved user experience.",
+  tags: ["Next.js","OpenRouter API","Google Auth"],
   github: "#",
   demo: "https://sky-chat-ai.vercel.app/",
   image: Chatbot,
