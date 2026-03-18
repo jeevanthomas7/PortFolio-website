@@ -19,8 +19,8 @@ const projects = [
   title: "AI Chatbot",
   description:
     "Full-stack AI chatbot built with Next.js and TypeScript using OpenRouter API. Features real-time messaging, conversation history, and intelligent responses with a clean UI.",
-  tags: ["Next.js", "TypeScript", "OpenRouter API", "Tailwind CSS"],
-  github: "https://github.com/jeevanthomas7/PortFolio-website",
+  tags: ["Next.js", "TypeScript", "API", "Tailwind CSS"],
+  github: "#",
   demo: "https://sky-chat-ai.vercel.app/",
   image: Chatbot,
 },
