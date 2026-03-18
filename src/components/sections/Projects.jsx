@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import AiMusic from "../../img/AiMusic.png";
-import Expense from "../../img/Expense.png";
+import Chatbot from "../../img/Chatbot.png";
 import SmartCar from "../../img/smartCAR.jpeg";
 
 const projects = [
@@ -15,15 +15,15 @@ const projects = [
     demo: "https://dot-in.vercel.app/",
     image: AiMusic,
   },
-  {
-    title: "Expense Tracker",
-    description:
-      "State-managed expense tracking with dashboard visualization. Includes detailed analytics and transaction history.",
-    tags: ["React", "Redux", "Chart.js"],
-    github: "#",
-    demo: "https://expense-tracker-website-eosin.vercel.app/",
-    image: Expense,
-  },
+{
+  title: "AI Chatbot",
+  description:
+    "Full-stack AI chatbot built with Next.js and TypeScript using OpenRouter API. Features real-time messaging, conversation history, and intelligent responses with a clean UI.",
+  tags: ["Next.js", "TypeScript", "OpenRouter API", "Tailwind CSS"],
+  github: "https://github.com/jeevanthomas7/PortFolio-website",
+  demo: "https://sky-chat-ai.vercel.app/",
+  image: Chatbot,
+},
   {
     title: "Smart Car Control System",
     description:
