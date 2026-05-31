@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import AiMusic from "../../img/AiMusic.png";
-import Chatbot from "../../img/Chatbot.png";
+import chatbot from "../../img/Chatbot.png";
 import SmartCar from "../../img/smartCAR.jpeg";
 import Expense from "../../img/Expense.png";
 
@@ -22,7 +22,7 @@ const projects = [
         tags: ["Next.js", "OpenRouter", "OAuth"],
         github: "#",
         demo: "https://sky-chat-ai.vercel.app/",
-        image: Chatbot
+        image: chatbot
     },
     {
         title: "Smart Car Control System",
