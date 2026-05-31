@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
+import logo from "../../assets/logoname.png";
 
-const Navbar = () => {
+const Navbar = ({ onHomeLink, activeProject }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [activeLink, setActiveLink] = useState("home");
 
     useEffect(() => {
+        if (activeProject) {
+            setActiveLink("projects");
+        }
+    }, [activeProject]);
+
+    useEffect(() => {
+        document.title = "Jeevan Thomas | Portfolio";
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
@@ -38,16 +46,36 @@ const Navbar = () => {
             window.removeEventListener("scroll", handleScroll);
             observer.disconnect();
         };
-    }, []);
+    }, [activeProject]);
 
     const navLinks = [
         { name: "Home", id: "home" },
         { name: "About", id: "about" },
-        { name: "Experience", id: "experience" },
-        { name: "Projects", id: "projects" },
         { name: "Skills", id: "skills" },
+        { name: "Projects", id: "projects" },
+        { name: "Experience", id: "experience" },
         { name: "Contact", id: "contact" },
     ];
+
+    const handleNavLinkClick = (e, id, isMobile = false) => {
+        if (onHomeLink) {
+            onHomeLink();
+        }
+        if (isMobile) {
+            setIsOpen(false);
+        }
+        const element = document.getElementById(id);
+        if (!element) {
+            e.preventDefault();
+            setTimeout(() => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                    window.history.pushState(null, null, `#${id}`);
+                }
+            }, 50);
+        }
+    };
 
     return (
         <nav
@@ -55,9 +83,23 @@ const Navbar = () => {
                 } border-b border-borderColor/40`}
         >
             <div className="container mx-auto px-4 md:px-8 lg:px-16 flex justify-between items-center">
-                <a href="#home" className="text-2xl font-bold transition-transform hover:scale-105">
-                    <span className="text-primary">Port</span>
-                    <span className="text-textPrimary">Folio</span>
+                <a
+                    href="/"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        if (onHomeLink) {
+                            onHomeLink();
+                        }
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        window.history.pushState(null, null, "/");
+                    }}
+                    className="flex items-center transition-transform hover:scale-105"
+                >
+                    <img
+                        src={logo}
+                        alt="Jeevan Thomas"
+                        className="h-7 md:h-8 w-auto object-contain"
+                    />
                 </a>
 
                 <div className="hidden md:flex items-center space-x-8">
@@ -65,6 +107,7 @@ const Navbar = () => {
                         <a
                             key={link.id}
                             href={`#${link.id}`}
+                            onClick={(e) => handleNavLinkClick(e, link.id)}
                             className={`text-sm font-semibold tracking-wide transition-colors relative pb-1 ${activeLink === link.id ? "text-primary" : "text-textSecondary hover:text-primary"
                                 }`}
                         >
@@ -103,7 +146,7 @@ const Navbar = () => {
                                     href={`#${link.id}`}
                                     className={`text-lg font-bold ${activeLink === link.id ? "text-primary" : "text-textSecondary"
                                         }`}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => handleNavLinkClick(e, link.id, true)}
                                 >
                                     {link.name}
                                 </a>

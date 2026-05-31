@@ -35,51 +35,51 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-24 bg-bgSection overflow-hidden">
+        <section id="contact" className="py-10 md:py-14 lg:py-16 bg-bgSection overflow-hidden">
             <div className="container mx-auto px-4 md:px-8 lg:px-16">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter text-slate-900">Get In Touch</h2>
-                    <div className="w-20 h-1.5 bg-primary mx-auto mb-10 rounded-full"></div>
-                    <p className="text-slate-500 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
-                        Have a project in mind or want to discuss an opportunity? I'd love to hear from you.
+                <div className="text-center mb-6 lg:mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Get In Touch</h2>
+                    <div className="w-16 h-1.5 bg-primary mx-auto mb-6 rounded-full"></div>
+                    <p className="text-slate-500 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+                         Have a project in mind or want to discuss an opportunity? I'd love to hear from you.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-start">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="space-y-8"
+                        className="space-y-8 w-full"
                     >
-                        <div>
-                            <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight mb-8">Contact Information</h3>
+                        <div className="w-full">
+                            <h3 className="lg:text-2xl text-lg font-black text-slate-900 uppercase tracking-tight mb-6">Contact Information</h3>
                             <div className="space-y-6">
-                                <div className="flex items-center gap-5 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary text-2xl flex-shrink-0 shadow-sm border border-borderColor group-hover:bg-primary group-hover:text-white transition-all">
+                                <div className="flex flex-row items-center gap-5 group">
+                                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-2xl flex items-center justify-center text-primary text-xl lg:text-2xl flex-shrink-0 shadow-sm border border-borderColor group-hover:bg-primary group-hover:text-white transition-all">
                                         <FaEnvelope />
                                     </div>
                                     <div>
                                         <p className="text-[10px] text-primary font-black uppercase tracking-widest mb-1">Email</p>
-                                        <a href="mailto:jeevanthomas717@gmail.com" className="text-slate-900 font-bold text-lg hover:text-primary transition-colors">
+                                        <a href="mailto:jeevanthomas717@gmail.com" className="text-slate-900 font-bold text-base md:text-lg hover:text-primary transition-colors">
                                             jeevanthomas717@gmail.com
                                         </a>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-5 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary text-2xl flex-shrink-0 shadow-sm border border-borderColor group-hover:bg-primary group-hover:text-white transition-all">
+                                <div className="flex flex-row items-center gap-5 group">
+                                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-2xl flex items-center justify-center text-primary text-xl lg:text-2xl flex-shrink-0 shadow-sm border border-borderColor group-hover:bg-primary group-hover:text-white transition-all">
                                         <FaMapMarkerAlt />
                                     </div>
                                     <div>
                                         <p className="text-[10px] text-primary font-black uppercase tracking-widest mb-1">Location</p>
-                                        <p className="text-slate-900 font-bold text-lg">Wayanad, Kerala</p>
+                                        <p className="text-slate-900 font-bold text-base md:text-lg">Wayanad, Kerala</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="pt-8 border-t border-borderColor/50">
+                        <div className="pt-8 border-t border-borderColor/50 w-full">
                             <h3 className="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Social Connections</h3>
                             <div className="flex gap-4">
                                 {[
@@ -92,7 +92,7 @@ const Contact = () => {
                                         href={item.href}
                                         target={item.href !== "#" ? "_blank" : undefined}
                                         rel={item.href !== "#" ? "noopener noreferrer" : undefined}
-                                        className="w-14 h-14 bg-white border border-borderColor rounded-2xl flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all text-2xl shadow-sm"
+                                        className="w-12 h-12 lg:w-14 lg:h-14 bg-white border border-borderColor rounded-2xl flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all text-xl lg:text-2xl shadow-sm"
                                     >
                                         <item.icon />
                                     </a>

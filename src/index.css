@@ -28,3 +28,20 @@ html {
 section {
   scroll-margin-top: 80px;
 }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.bg-primary\/8 {
+  background-color: rgb(124 58 237 / 0.08);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
