@@ -11,7 +11,7 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className="text-center lg:text-left mb-6">
+                        <div className="text-center lg:text-left mb-6" data-aos="fade-right">
                             <h2 className="text-3xl md:text-4xl font-bold relative inline-block text-slate-900 tracking-tight">
                                 About Me
                                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 h-1 bg-primary rounded-full"></span>

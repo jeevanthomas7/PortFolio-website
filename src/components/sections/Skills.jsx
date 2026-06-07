@@ -76,7 +76,7 @@ const Skills = () => {
     return (
         <section id="skills" className="py-10 md:py-14 lg:py-16 bg-white">
             <div className="container mx-auto px-4 md:px-8 lg:px-16">
-                <div className="text-center mb-8 lg:mb-12">
+                <div className="text-center mb-8 lg:mb-12" data-aos="fade-up">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Skills & Technologies</h2>
                     <div className="w-16 h-1.5 bg-primary mx-auto mb-6 rounded-full"></div>
                     <p className="text-slate-500 max-w-2xl mx-auto text-base md:text-lg">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaDownload, FaEye } from "react-icons/fa";
 import Button from "../ui/Button";
-import cv from "../../img/Jeevan_Thomas.pdf";
+import cv from "../../img/Jeevan Thomas Resume.pdf";
 
 const StatChip = ({ value, label, delay }) => (
     <motion.div
@@ -42,7 +42,7 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-[#0F172A] mb-4 tracking-tight"
+                            className="text-4xl md:text-6xl lg:text-6xl font-extrabold text-[#0F172A] mb-4 tracking-tight"
                         >
                             I'm <span className="text-[#0F172A]">JEEVAN THOMAS</span>
                         </motion.h1>

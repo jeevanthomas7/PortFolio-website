@@ -4,57 +4,59 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import AiMusic from "../../img/AiMusic.png";
 import chatbot from "../../img/Chatbot.png";
-import SmartCar from "../../img/smartCAR.jpeg";
-import Expense from "../../img/Expense.png";
+import RealTimeChatApp from "../../img/Real-time-chat-app.png";
+import EcommerceJewellery from "../../img/Ecommerce-jewellery.png";
+import RestaurantTheme from "../../img/Resturant Theme.png";
+import ThreeDDesign from "../../img/3d design.png";
 
 const projects = [
     {
         title: "AI Based Music Recommendation System",
-        description: "AI-based emotion detection with personalized music suggestions. Features dynamic playlist generation and real-time analysis.",
-        tags: ["MERN", "AI", "API"],
-        github: "https://github.com/jeevanthomas7/Ai-Based-Music-Recommendation-System",
+        description: "An intelligent recommendation engine leveraging AI emotion detection to curate personalized playlists. Built with a robust backend for real-time analysis and dynamic content delivery.",
+        tags: ["React", "Node.js", "AI Integration", "MongoDB"],
+        github: "https://github.com/jeevanthomas7/Ai-Based-Music-Recommentation-System",
         demo: "https://dot-in.vercel.app/",
         image: AiMusic
     },
     {
+        title: "Real-Time Chat App",
+        description: "A high-performance communication platform engineered with Socket.io. Features secure private messaging, dynamic room creation, live typing indicators, and scalable WebSocket infrastructure.",
+        tags: ["React", "Socket.io", "Node.js", "Express"],
+        github: "https://github.com/jeevanthomas7/Real-Time-Chat-App",
+        demo: "https://chatapp-chatify.vercel.app/",
+        image: RealTimeChatApp
+    },
+    {
         title: "AI Chatbot",
-        description: "Built a full-stack AI chatbot using Next.js and TypeScript with OpenRouter API integration. Features real-time messaging, context-aware responses, and secure Google Auth.",
-        tags: ["Next.js", "OpenRouter", "OAuth"],
-        github: "#",
+        description: "An advanced conversational interface powered by Next.js and LLM APIs. Designed for low-latency, context-aware interactions with seamless state management and an accessible UI.",
+        tags: ["Next.js", "TypeScript", "LLM APIs", "Tailwind"],
+        github: "https://github.com/jeevanthomas7/chatbot",
         demo: "https://sky-chat-ai.vercel.app/",
         image: chatbot
     },
     {
-        title: "Smart Car Control System",
-        description: "Real-time wireless car control with sensor monitoring. Built for IoT performance and low-latency response.",
-        tags: ["Android", "IoT", "C++"],
-        github: "#",
-        demo: "#",
-        image: SmartCar
+        title: "Ecommerce Jewellery",
+        description: "A premium storefront tailored for high-end retail. Delivers a sophisticated experience with fluid animations, dynamic product filtering, and a seamless checkout architecture.",
+        tags: ["React", "Tailwind CSS", "Redux", "Framer"],
+        github: "https://github.com/jeevanthomas7/jewellery-theme",
+        demo: "https://ecommerce-jewellery-in.netlify.app/",
+        image: EcommerceJewellery
     },
     {
-        title: "AI Expense Tracker",
-        description: "Smart expense monitoring platform featuring predictive category spending, financial analytics, and visual reports.",
-        tags: ["React", "Chart.js", "Node.js"],
-        github: "#",
-        demo: "#",
-        image: Expense
+        title: "Restaurant Theme",
+        description: "A beautifully crafted, fully responsive landing page optimized for hospitality. Showcases immersive imagery, interactive menu interfaces, and a refined booking flow.",
+        tags: ["React", "UI/UX", "Responsive", "CSS3"],
+        github: "https://github.com/jeevanthomas7/Resturant-theme",
+        demo: "https://resturant-in.netlify.app/",
+        image: RestaurantTheme
     },
     {
-        title: "E-Commerce Platform",
-        description: "Full-stack digital storefront with secure Stripe payments, cart management, search filters, and an admin dashboard.",
-        tags: ["MERN", "Stripe", "Tailwind CSS"],
-        github: "#",
-        demo: "#",
-        image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        title: "Real-time Chat Room",
-        description: "Instant messaging application featuring room channels, typing indicators, active user lists, and Socket.io communication.",
-        tags: ["React", "Socket.io", "Express"],
-        github: "#",
-        demo: "#",
-        image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80"
+        title: "3D Design Portfolio",
+        description: "An immersive web experience utilizing WebGL and Three.js. Features optimized 3D model rendering, custom shaders, and complex spatial camera animations.",
+        tags: ["Three.js", "React Three Fiber", "WebGL", "GSAP"],
+        github: "https://github.com/jeevanthomas7/NJ-WORKS-3d-design",
+        demo: "https://nj-works.vercel.app/",
+        image: ThreeDDesign
     }
 ];
 
@@ -73,7 +75,7 @@ const Projects = ({ onSelectProject }) => {
     return (
         <section id="projects" className="py-10 md:py-14 lg:py-16 bg-bgSection overflow-hidden">
             <div className="container mx-auto px-4 md:px-8 lg:px-16">
-                <div className="text-center mb-6 lg:mb-12">
+                <div className="text-center mb-6 lg:mb-12" data-aos="fade-up">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

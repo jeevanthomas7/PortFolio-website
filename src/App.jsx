@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -11,6 +13,14 @@ import ProjectDetail from "./components/sections/ProjectDetail";
 
 function App() {
   const [activeProject, setActiveProject] = useState(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  }, []);
 
   const handleSelectProject = (project) => {
     setActiveProject(project);
