@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaDownload, FaEye } from "react-icons/fa";
 import Button from "../ui/Button";
-import cv from "../../img/Jeevan Thomas Resume.pdf";
 
 const StatChip = ({ value, label, delay }) => (
     <motion.div
@@ -79,7 +78,7 @@ const Hero = () => {
                                     View Projects
                                 </Button>
                             </a>
-                            <a href={cv} download="Jeevan_Thomas_Resume.pdf" className="w-full sm:w-auto">
+                            <a href="/Jeevan_Thomas_Resume.pdf" download="Jeevan_Thomas_Resume.pdf" className="w-full sm:w-auto">
                                 <Button
                                     variant="outline"
                                     className="w-full sm:min-w-[168px] py-3.5 rounded-xl text-sm font-bold border-2"
