@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import AiMusic from "../../img/AiMusic.png";
-import chatbot from "../../img/Chatbot.png";
+import chatbot from "../../img/chatbot.png";
 import RealTimeChatApp from "../../img/Real-time-chat-app.png";
 import EcommerceJewellery from "../../img/Ecommerce-jewellery.png";
 import RestaurantTheme from "../../img/Resturant Theme.png";
