@@ -66,9 +66,12 @@ const Projects = ({ onSelectProject }) => {
 
     const handleScroll = () => {
         if (scrollRef.current) {
-            const { scrollLeft, clientWidth } = scrollRef.current;
-            const index = Math.round(scrollLeft / (clientWidth - 40));
-            setActiveDot(Math.min(index, projects.length - 1));
+            const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+            const maxScrollLeft = scrollWidth - clientWidth;
+            if (maxScrollLeft <= 0) return;
+            const progress = scrollLeft / maxScrollLeft;
+            const index = Math.round(progress * (projects.length - 1));
+            setActiveDot(Math.min(Math.max(index, 0), projects.length - 1));
         }
     };
 
@@ -96,12 +99,12 @@ A selection of my recent work bridging frontend interfaces and backend APIs.
                     <div
                         ref={scrollRef}
                         onScroll={handleScroll}
-                        className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 pb-4 w-full px-4 -mx-4"
+                        className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 pb-4 -mx-4 px-4 scroll-pl-4 after:content-[''] after:w-[1px] after:shrink-0"
                     >
                         {projects.map((project, index) => (
                             <div
                                 key={index}
-                                className="snap-center shrink-0 w-[290px] sm:w-[320px] bg-slate-50 rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm flex flex-col"
+                                className="snap-start shrink-0 w-[290px] sm:w-[320px] bg-slate-50 rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm flex flex-col"
                             >
                                 <div className="p-4 pb-0">
                                     <div

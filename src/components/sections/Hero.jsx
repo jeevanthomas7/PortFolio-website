@@ -9,7 +9,7 @@ const StatChip = ({ value, label, delay }) => (
         transition={{ delay }}
         className="bg-white border border-borderColor rounded-xl px-4 py-3 shadow-sm text-center flex-1 min-w-[80px]"
     >
-        <p className="text-lg font-black text-primary leading-none">{value}</p>
+        <p className="text-lg font-black text-[#0F172A] leading-none">{value}</p>
         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{label}</p>
     </motion.div>
 );
